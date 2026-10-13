@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "BloxIMD",
+    "name": "BloxIMD",
+    "symbol": "BLOX",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {
+    "poolBps": 8000,
+    "initialMarketCapWei": "2500000000000000000000",
+    "remainderTo": "0xd6fac924dcda60610764cc645dbd3939fc18e1a3"
+  },
+  "notes": "BloxIMD (src/BloxIMD.sol, contract BloxIMD) is a plain OpenZeppelin v5.4.0 ERC-20 named BloxIMD with symbol BLOX and 18 decimals. Its constructor takes no arguments and mints the fixed supply of 1,000,000,000 BLOX (1000000000000000000000000000 minor units) exactly once to msg.sender, which is the factory under ProjectFactory.launchCustom. Transfers move the exact amount with no tax, burn, reflection or exemption logic, so the factory's transfer to the MerkleDistributor, the pool seed through the PoolManager and trader swaps all move exactly what they say. There is no mint, burn, pause, blacklist, freeze, owner, upgrade or proxy entrypoint; total supply can never change after construction. The token makes no external calls and needs no initialization. There are no application contracts in the accepted tree. The pool pairs with IMD at 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7; initialPrice is provenance only and the deployer derives the opening price from economics.initialMarketCapWei and totalSupply."
+}
